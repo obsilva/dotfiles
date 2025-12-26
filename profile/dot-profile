@@ -1,0 +1,19 @@
+# Environment variables
+
+# XDG variables. These are the default, enforcy by explicitly setting it
+# https://specifications.freedesktop.org/basedir-spec/latest/
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# Configuration directories
+export DOTFILES="$XDG_CONFIG_HOME/dotfiles"     # dotfiles
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"           # z shell (zsh)
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"        # neovim
+
+# Basic user-wide configs
+export TERM='xterm-256color'                    # Terminal emulator
+export VISUAL="nvim"                            # Neovim as text editor
+export EDITOR="nvim"                            # Neovim as text editor
+export SYSTEMD_EDITOR=$EDITOR

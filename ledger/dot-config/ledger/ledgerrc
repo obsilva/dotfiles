@@ -1,0 +1,5 @@
+--file /mnt/truenas/otavio/financeiro/ledger/otavio.ledger
+--pedantic
+--strict
+--color
+--depth 2

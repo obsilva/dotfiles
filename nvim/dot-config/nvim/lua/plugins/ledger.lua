@@ -1,17 +1,17 @@
 return {
 	'ledger/vim-ledger',
-	-- only load on ledger files
 	enabled = true,
+	-- only load on ledger files
 	ft = 'ledger',
 	-- version = false,
 
 	init = function()
-		vim.g.ledger_bin = 'ledger'            -- Path to ledger executable
-		vim.g.ledger_date_format = '%Y-%m-%d'  -- ISO format
+		vim.g.ledger_bin = 'ledger'        -- Path to ledger executable
+		vim.g.ledger_date_format = '%Y-%m-%d' -- ISO format
 		vim.g.ledger_default_commodity = 'BRL' -- Brazilian Real
-		vim.g.ledger_commodity_before = 0 -- Add commodity after the ammount
-		vim.g.ledger_commodity_sep = ' '  -- Ammount and commodity separator
-		vim.g.ledger_align_at = 67        -- Decimal separator column alingment
+		vim.g.ledger_commodity_before = 0  -- Add commodity after the ammount
+		vim.g.ledger_commodity_sep = ' '   -- Ammount and commodity separator
+		vim.g.ledger_align_at = 67         -- Decimal separator column alingment
 		-- Custom separator to align on the commodity instead of decimal separator
 		-- Tried the ledger_align_commodity option but didn't work as I was expecting
 		vim.g.ledger_decimal_sep = '"ABCDEFGHIJKLMNOPQRSTUVWXYZ'

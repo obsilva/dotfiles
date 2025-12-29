@@ -1,6 +1,6 @@
 return {
 	{
-		-- Configuration files for LSP functionality
+		-- Collection of configuration files for language servers
 		'neovim/nvim-lspconfig',
 		enabled = true,
 	},
@@ -19,7 +19,7 @@ return {
 		},
 
 		opts = {
-			-- Language servers to install and configure
+			-- Language servers to install (mason) and configure (lspconfig)
 			ensure_installed = {
 				'bashls',
 				'docker_language_server',

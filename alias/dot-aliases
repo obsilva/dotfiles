@@ -1,0 +1,6 @@
+# Aliases
+alias vim="nvim"
+alias dotfiles="cd $DOTFILES && $VISUAL"
+alias finance="$VISUAL $TRUENAS_HOME/financeiro/ledger/otavio.ledger"
+alias notes="cd $TRUENAS_HOME/obsidian && $VISUAL"
+alias notebook="notes"

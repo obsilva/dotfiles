@@ -1,0 +1,32 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Shell Options
+shopt -s cdspell
+shopt -s checkwinsize
+shopt -s extglob
+
+# Bash Version >= 4
+shopt -s autocd   2>/dev/null || true
+shopt -s dirspell 2>/dev/null || true
+
+shopt -s histappend
+export HISTCONTROL="ignoredups:erasedups:ignorespace"
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTFILE="$HOME/.bash_history"
+
+# Aliases
+source $HOME/.aliases
+
+# Prompt line, ble.sh is required for starship's right_format
+source -- ~/.local/share/blesh/ble.sh
+eval "$(starship init bash)"

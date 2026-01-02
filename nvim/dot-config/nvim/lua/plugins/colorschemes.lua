@@ -33,6 +33,18 @@ return {
 		},
 	},
 	{
+		"dgox16/oldworld.nvim",
+		lazy = true,
+		--priority = 1000,
+		opts = {
+			styles = {
+				booleans = { bold = true },
+				functions = { italic = true },
+				comments = { italic = true },
+			},
+		},
+	},
+	{
 		"sainnhe/sonokai",
 		lazy = true,
 		--priority = 1000,

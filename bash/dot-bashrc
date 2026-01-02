@@ -1,11 +1,11 @@
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
+	. /etc/bashrc
 fi
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -15,7 +15,7 @@ shopt -s checkwinsize
 shopt -s extglob
 
 # Bash Version >= 4
-shopt -s autocd   2>/dev/null || true
+shopt -s autocd 2>/dev/null || true
 shopt -s dirspell 2>/dev/null || true
 
 shopt -s histappend

@@ -1,18 +1,18 @@
 return {
 	-- Keep all colorschemes and its configurations here
-	-- Set the main theme with 'lazy = false' and 'priority = 1000'
+	-- Set lazy = false', 'priority = 1000' in the main theme
 	{
-		'navarasu/onedark.nvim',
-		lazy = false,
+		"navarasu/onedark.nvim",
+		lazy = true,
 		--priority = 1000,
 		opts = {
 			-- default style. Options: dark, darker, cool, deep, warm, warmer
-			style = 'warmer',
+			style = "warmer",
 			disable_background = true,
 		},
 	},
 	{
-		'folke/tokyonight.nvim',
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		opts = {
@@ -21,17 +21,19 @@ return {
 		},
 	},
 	{
-		'catppuccin/nvim',
-		name = 'catppuccin',
+		"catppuccin/nvim",
+		name = "catppuccin",
 		lazy = true,
 		--priority = 1000,
 		opts = {
 			-- default style. Options: latte, frappe, macchiato, mocha
-			flavour = 'mocha',
+			flavour = "mocha",
+			-- automatically detect installed plugins and enable their integrations
+			auto_integrations = true,
 		},
 	},
 	{
-		'sainnhe/sonokai',
+		"sainnhe/sonokai",
 		lazy = true,
 		--priority = 1000,
 		opts = {
@@ -39,12 +41,12 @@ return {
 		},
 	},
 	{
-		'loctvl842/monokai-pro.nvim',
+		"loctvl842/monokai-pro.nvim",
 		lazy = true,
 		--priority = 1000,
 		opts = {
 			-- default style. Options: classic, octagon, pro, machine, ristretto, spectrum
-			filter = 'spectrum',
+			filter = "spectrum",
 		},
 	},
 }

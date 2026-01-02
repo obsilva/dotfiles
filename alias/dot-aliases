@@ -4,3 +4,11 @@ alias dotfiles="cd $DOTFILES && $VISUAL"
 alias finance="$VISUAL $TRUENAS_HOME/financeiro/ledger/otavio.ledger"
 alias notes="cd $TRUENAS_HOME/obsidian && $VISUAL"
 alias notebook="notes"
+
+# Git Aliases
+alias gaa="git add . --all"
+alias gc="git commit --message"
+alias gd="git diff"
+alias gp="git push"
+alias gs="git status"
+alias gu="git pull"

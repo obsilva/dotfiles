@@ -52,6 +52,7 @@ return {
 				"jdtls",
 				"lua_ls",
 				"sqlls",
+				"taplo",
 				"vimls",
 				"yamlls",
 				-- Debug Adapter

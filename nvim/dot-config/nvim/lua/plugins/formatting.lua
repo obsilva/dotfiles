@@ -22,6 +22,7 @@ return {
 			lua = { "stylua" },
 			markdown = { "prettier" },
 			sh = { "shfmt" },
+			toml = { "taplo" },
 			yaml = { "prettier" },
 			zsh = { "beautysh" },
 		},

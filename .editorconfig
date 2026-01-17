@@ -1,0 +1,30 @@
+# Unified coding style for different editors
+# More information at https://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+spelling_language = en-us
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 3
+
+[.git/**]
+indent_style = space
+indent_size = 2
+
+[*.{md,markdown}]
+indent_style = space
+indent_size = 2
+
+[*.{sh,zsh,bash,ksh}]
+indent_style = space
+indent_size = 2
+
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+

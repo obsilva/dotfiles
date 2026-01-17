@@ -3,18 +3,25 @@ return {
 	-- Set lazy = false', 'priority = 1000' in the main theme
 	{
 		"navarasu/onedark.nvim",
-		lazy = true,
-		--priority = 1000,
+		lazy = false,
+		priority = 1000,
 		opts = {
 			-- default style. Options: dark, darker, cool, deep, warm, warmer
 			style = "warmer",
-			disable_background = true,
 		},
 	},
 	{
+		-- Similar to onedark.vim above, but has a 'dark' variant with black background
+		-- Both themes share the 'onedark' name and therefore cannot be loaded
+		-- at the same time
+		"olimorris/onedarkpro.nvim",
+		lazy = true,
+		--priority = 1000,
+	},
+	{
 		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
+		lazy = true,
+		--priority = 1000,
 		opts = {
 			-- default style. Options: night, storm, moon, day
 			style = "night",

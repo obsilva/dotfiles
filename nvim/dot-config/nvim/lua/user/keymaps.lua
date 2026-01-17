@@ -18,8 +18,8 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Keep cursor at the center of window
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor centralized during half-page down moviment" })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor centralized during half-page up moviment" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Keep cursor centralized during half-page down movement" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Keep cursor centralized during half-page up movement" })
 vim.keymap.set("n", "n", "nzzzv", { desc = "Keep cursor centralized during forward search" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep cursor centralized during backward search" })
 
@@ -39,7 +39,7 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Go to previous error"
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
--- Replace all occurences of word under cursor
+-- Replace all occurrences of word under cursor
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Make file executable

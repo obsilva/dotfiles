@@ -3,7 +3,8 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Explore, { desc = "Open netrw directory explorer" })
+vim.keymap.set("n", "<leader>eo", vim.cmd.Explore, { desc = "Open netrw directory explorer" })
+vim.keymap.set("n", "<leader>ec", vim.cmd.Rexplore, { desc = "Close netrw directory explorer" })
 
 -- Move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })

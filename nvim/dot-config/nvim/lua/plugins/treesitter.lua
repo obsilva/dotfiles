@@ -1,7 +1,7 @@
 return {
 	-- Parser generator to boost highlighting
 	"nvim-treesitter/nvim-treesitter",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
 	build = ":TSUpdate",
 

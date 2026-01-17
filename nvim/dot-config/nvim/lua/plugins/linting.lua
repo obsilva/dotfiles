@@ -1,10 +1,11 @@
 return {
 	-- Asynchronous linter plugin
 	"mfussenegger/nvim-lint",
+	event = { "BufReadPost", "InsertLeave", "BufWritePost" },
 
 	config = function()
 		opts = {
-			events = { "BufWritePost", "BufReadPost", "InsertLeave" },
+			events = { "BufReadPost", "InsertLeave", "BufWritePost" },
 			linters = {},
 			linters_by_ft = {
 				ledger = { "hledger" },

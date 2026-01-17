@@ -20,7 +20,7 @@ return {
 		-- Bridge mason.vim and nvim-lspconfig plugins
 		-- nvim-lspconfig is a collection of configuration files for language servers
 		"mason-org/mason-lspconfig.nvim",
-		event = "VeryLazy",
+		lazy = true,
 		dependencies = {
 			"mason-org/mason.nvim",
 			"neovim/nvim-lspconfig",
@@ -37,7 +37,7 @@ return {
 	{
 		-- Helper pluging to automatically install Mason tools
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		event = "VeryLazy",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"mason-org/mason.nvim",
 			"mason-org/mason-lspconfig.nvim",

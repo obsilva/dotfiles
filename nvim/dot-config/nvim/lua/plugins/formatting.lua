@@ -15,15 +15,25 @@ return {
 
 	opts = {
 		format_on_save = false,
+		format_after_save = false,
 		-- set defaults in case we run it some other way than the keymap
 		default_format_opts = { async = true, lsp_format = "fallback" },
 		formatters_by_ft = {
-			ledger = { "trim_newlines", "trim_whitespace" },
+			["*"] = { "codespell" },
+			["_"] = { "trim_whitespace" },
+			bash = { "shfmt" },
+			dockerfile = { "dockerfmt" },
+			java = { "google-java-format" },
+			javascript = { "prettier" },
+			json = { "prettier" },
+			ledger = { "trim_whitespace" },
 			lua = { "stylua" },
 			markdown = { "prettier" },
 			sh = { "shfmt" },
+			sql = { "sqlfmt" },
 			toml = { "taplo" },
-			yaml = { "prettier" },
+			typescript = { "prettier" },
+			yaml = { "yamlfmt" },
 			zsh = { "beautysh" },
 		},
 	},

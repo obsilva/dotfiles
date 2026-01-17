@@ -27,8 +27,13 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Keep cursor centralized during backw
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy selection to clipboard" })
 vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Copy line to clipboard" })
 
--- Delete selection without saving to register
-vim.keymap.set({ "n", "v" }, "<leader>d", "\"_d", { desc = "Delete selection without saving to register" })
+-- I mostly don't want to save to clipboard what I delete or change
+vim.keymap.set({ "n", "v" }, "<leader>d", "d", { desc = "Delete saving to register" })
+vim.keymap.set({ "n", "v" }, "d", "\"_d", { desc = "Delete to blackhole register" })
+vim.keymap.set({ "n", "v" }, "<leader>x", "x", { desc = "Delete char saving to register" })
+vim.keymap.set({ "n", "v" }, "x", "\"_x", { desc = "Delete char to blackhole register" })
+vim.keymap.set({ "n", "v" }, "<leader>c", "c", { desc = "Change saving to register" })
+vim.keymap.set({ "n", "v" }, "c", "\"_c", { desc = "Change to blackhole register" })
 
 -- CTRL + c works as ESC
 vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "'CTRL + c' works as 'ESC'"})

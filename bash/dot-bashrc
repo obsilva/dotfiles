@@ -1,32 +1,39 @@
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# Base shell-independent configuration
+source $HOME/.profile
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+# Load ble.sh. Replace GNU readline (default) as line editor
+# Also, required by starship prompt
+[[ $- == *i* ]] && source -- ~/.local/share/blesh/ble.sh --attach=none
 
-# Shell Options
+# Shell options
 shopt -s cdspell
 shopt -s checkwinsize
 shopt -s extglob
 
-# Bash Version >= 4
+# Enable if supported. Bash version >= 4
 shopt -s autocd 2>/dev/null || true
 shopt -s dirspell 2>/dev/null || true
 
+# History
 shopt -s histappend
 export HISTCONTROL="ignoredups:erasedups:ignorespace"
-export HISTSIZE=10000
+export HISTSIZE=11000
 export HISTFILESIZE=10000
 export HISTFILE="$HOME/.bash_history"
 
-# Aliases
+# User aliases
 source $HOME/.aliases
 
-# Prompt line, ble.sh is required for starship's right_format
-source -- ~/.local/share/blesh/ble.sh
-eval "$(starship init bash)"
+# Prompt line - https://github.com/starship/starship
+[[ ! ${BLE_VERSION-} ]] || ble-attach && eval "$(starship init bash)"
+
+# Completions
+complete -A binding bind
+complete -A setopt set
+complete -A shopt shopt
+complete -A helptopic help
+complete -a alias unalias
+complete -b builtin
+complete -c type which
+complete -cf man sudo
+complete -d cd pushd rmdir

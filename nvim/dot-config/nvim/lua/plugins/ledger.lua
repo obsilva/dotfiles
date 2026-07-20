@@ -1,8 +1,11 @@
 return {
 	"ledger/vim-ledger",
-	-- only load on ledger files
-	ft = "ledger",
 	-- version = false,
+	ft = "ledger",
+	keys = {
+		{ "<leader>la", vim.cmd.LedgerAlign, "n" },
+		{ "<leader>lab", vim.cmd.LedgerAlignBuffer, "n" },
+	},
 
 	init = function()
 		vim.g.ledger_bin = "ledger" -- Path to ledger executable
@@ -16,29 +19,12 @@ return {
 		vim.g.ledger_decimal_sep = '"ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 		vim.g.ledger_fuzzy_account_completion = 1 -- Enable fuzzy matching completion
 
-		vim.cmd([[
-			function LedgerSort() range
-				execute a:firstline .. ',' .. a:lastline .. '! ledger -f - -I print'
-				execute a:firstline .. ',' .. a:lastline .. 's/^    /  /g'
-				execute a:firstline .. ',' .. a:lastline .. 'LedgerAlign'
-			endfunction
-			command -range LedgerSort :<line1>,<line2>call LedgerSort()
-		]])
-
-		vim.keymap.set("n", "<leader>la", function()
-			vim.cmd("LedgerAlign")
-		end)
-		vim.keymap.set("n", "<leader>lab", function()
-			vim.cmd("LedgerAlignBuffer")
-		end)
-		vim.keymap.set("n", "<leader>ld", function()
-			vim.fn["ledger#transaction_date_set"]('line(".")', "primary")
-		end)
-		vim.keymap.set("n", "<leader>ldu", function()
-			vim.fn["ledger#transaction_date_set"]('line(".")', "unshift")
-		end)
 		vim.keymap.set("n", "<leader>ls", function()
 			vim.fn["ledger#transaction_state_toggle"]('line(".")', "!*")
+		end)
+
+		vim.keymap.set("n", "<leader>ld", function()
+			vim.fn["ledger#transaction_date_set"]('line(".")', "primary")
 		end)
 	end,
 	opt = {},

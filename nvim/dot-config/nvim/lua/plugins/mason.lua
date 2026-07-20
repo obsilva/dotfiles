@@ -35,7 +35,7 @@ return {
 		},
 	},
 	{
-		-- Helper pluging to automatically install Mason tools
+		-- Helper plugin to automatically install Mason tools
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {

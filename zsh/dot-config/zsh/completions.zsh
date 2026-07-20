@@ -12,8 +12,13 @@ fi
 # Check the following guide for additional information:
 # https://thevaluable.dev/zsh-completion-guide-examples/
 
-autoload -U compinit; compinit
+autoload -U compinit && compinit
 _comp_options+=(globdots) # With hidden files
+
+# Docker-specific completions
+if [ -x "$(command -v docker)" ]; then
+    source <(docker completion zsh)
+fi
 
 # setopt GLOB_COMPLETE  # Show autocompletion menu with globs
 setopt MENU_COMPLETE    # Automatically highlight first element of completion menu

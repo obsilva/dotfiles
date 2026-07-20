@@ -18,6 +18,9 @@ vim.cmd.colorscheme("habamax") -- fallback built-in colorscheme, overwritten via
 vim.opt.colorcolumn = "80,100,120" -- vertical rules
 vim.opt.showmode = false -- mode already displayed in the status line
 
+vim.opt.winborder = "rounded" -- floating windows border style
+require("vim._core.ui2").enable() -- enables v0.12+ redesigned elements
+
 vim.opt.swapfile = false
 vim.opt.undofile = true
 

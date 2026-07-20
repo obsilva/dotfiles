@@ -5,10 +5,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# Configuration directories
-export DOTFILES="$XDG_CONFIG_HOME/dotfiles"	# dotfiles
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"			# z shell (zsh)
-export NVIMCONFIG="$XDG_CONFIG_HOME/nvim"		# neovim
+# Frequently accessed locations
+export DOTFILES="$XDG_CONFIG_HOME/dotfiles" # dotfiles dir
+export TRUENAS="/mnt/truenas"           # TrueNAS shares local mount
+export TRUENAS_HOME="$TRUENAS/otavio"   # TrueNAS otavio home
 
 # Basic terminal and editor config
 export TERM="xterm-256color"            # Terminal with color support
@@ -16,6 +16,15 @@ export VISUAL="nvim"                    # Default visual editor
 export EDITOR="vi"                      # Fallback line editor
 export SYSTEMD_EDITOR=$VISUAL
 
-# Frequently used locations
-export TRUENAS="/mnt/truenas"						# TrueNAS shares local mount
-export TRUENAS_HOME="$TRUENAS/otavio"			# TrueNAS otavio directory
+# Less colors for man pages
+export MANPAGER='less'
+export GROFF_NO_SGR=1                   # For Konsole and Gnome-terminal
+export LESS_TERMCAP_mb=$'\033[1;34m'    # Begin blinking mode: bold blue
+export LESS_TERMCAP_md=$'\033[1;34m'    # Begin bold: bold blue
+export LESS_TERMCAP_me=$'\033[0m'       # Reset special modes like bold, blink, etc
+export LESS_TERMCAP_us=$'\033[4;36m'    # Begin underline: underline cyan
+export LESS_TERMCAP_ue=$'\033[0m'       # Reset underline
+export LESS_TERMCAP_so=$'\033[1;100m'   # Begin standout (info box and search): bold, gray-bg
+export LESS_TERMCAP_se=$'\033[0m'       # Reset standout
+export LESS_TERMCAP_mr=$'\033[7m'       # Begin reverse-video mode
+export LESS_TERMCAP_mh=$'\033[2m'       # Begin dim/half-bright mode

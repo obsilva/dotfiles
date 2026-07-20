@@ -1,0 +1,72 @@
+# Inspired by https://github.com/acdlite/bash-dotfiles/blob/master/.inputrc
+
+# Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
+set input-meta on
+set output-meta on
+# We don't need to type in 8-bit characters, keep it off.
+# Enabling makes the meta key not work as a meta key, which is annoying to those
+# which don't need to type in 8-bit characters.
+set convert-meta off
+
+# Add a trailing slash when autocompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Do not autocomplete hidden files unless the pattern explicitly begins with a dot
+set match-hidden-files off
+
+# Make autocompletion case insensitive
+set completion-ignore-case on
+# Combined with ignore-case, treats hyphens (-) and underscores (_) the same
+set completion-map-case on
+
+# Display possible completions immediately if multiple matches ('off' rings the bell)
+set show-all-if-ambiguous on
+
+# Page completions if too many to display at once
+set page-completions on
+
+# Ask to show all if there are more than this possible completions
+set completion-query-items 100
+
+# Show extra file information when completing, like `ls -F` does
+set visible-stats on
+
+# Completions use different colors to indicate their file type
+set colored-stats on
+
+# Display the prefix to complete in a different color
+set colored-completion-prefix on
+
+# Be more intelligent when autocompleting by also looking at the text after
+# the cursor. For example, when the current line is "cd ~/src/mozil", and
+# the cursor is on the "z", pressing Tab will not autocomplete it to "cd
+# ~/src/mozillail", but to "cd ~/src/mozilla". (This is supported by the
+# Readline used by Bash 4.)
+set skip-completed-text on
+
+# Use the text that has already been typed as the prefix for searching through
+# commands (i.e. more intelligent Up/Down behavior)
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# some defaults / modifications for the emacs mode
+$if mode=emacs
+# allow the use of the Home/End keys
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
+# allow the use of the Delete/Insert keys
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# Use Alt/Meta + Delete to delete the preceding word
+"\e[3;3~": kill-word
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+$endif

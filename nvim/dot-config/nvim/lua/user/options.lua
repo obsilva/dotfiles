@@ -30,3 +30,6 @@ vim.opt.scrolloff = 8 -- lines of context to keep around the cursor
 vim.opt.sidescrolloff = 8 -- columns of context
 vim.opt.signcolumn = "yes" -- always display the signcolumn
 vim.opt.isfname:append("@-@") -- include '@' character in file names
+
+vim.opt.spell = true
+vim.opt.spelllang = "en_us,pt_br"

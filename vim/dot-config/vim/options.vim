@@ -46,6 +46,7 @@ set relativenumber			" Show line number on the current line and relative numbers
 "set visualbell				" Flash the screen instead of beeping on errors (no sounds)
 set title					" Set the window’s title, reflecting the file currently being edited
 set background=dark			" Use colors that suit a dark background
+colorscheme desert			" Fallback built-in colorscheme, overwrite via plugins
 set fillchars=vert:▒		" Character to use as a vertical separator
 
 " Backup options

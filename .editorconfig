@@ -9,22 +9,18 @@ end_of_line = lf
 spelling_language = en-us
 insert_final_newline = true
 trim_trailing_whitespace = true
-indent_style = tab
-indent_size = 3
+indent_style = space
+indent_size = 4
 
 [.git/**]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.{md,markdown}]
+trim_trailing_whitespace = false
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.{sh,zsh,bash,ksh}]
 indent_style = space
-indent_size = 2
-
-[*.{yml,yaml}]
-indent_style = space
-indent_size = 2
-
+indent_size = 4

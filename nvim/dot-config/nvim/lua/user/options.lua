@@ -7,10 +7,10 @@ vim.opt.number = true -- ...but show the actual number for the line we are on
 vim.opt.ignorecase = true -- ignore case when searching...
 vim.opt.smartcase = true -- ... unless there is a capital letter in the query
 
-vim.opt.tabstop = 3 -- number of spaces tabs count for
-vim.opt.softtabstop = 3
-vim.opt.shiftwidth = 3 -- size of an indent
---vim.opt.expandtab = true -- expand tabs into spaces, for indent using space?
+vim.opt.tabstop = 4 -- number of spaces a tab counts for
+vim.opt.shiftwidth = 4 -- indentation size for auto-indent, <<, and >> commands
+vim.opt.softtabstop = -1 -- use shiftwidth for backspace and tab size in insert mode
+vim.opt.expandtab = true -- expand tabs into spaces?
 --vim.opt.smartindent = true
 
 vim.opt.termguicolors = true -- explicitly enables 24-bit RGB color

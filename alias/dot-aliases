@@ -1,14 +1,23 @@
-# Aliases
-alias vim="nvim"
-alias dotfiles="cd $DOTFILES && $VISUAL"
-alias finance="$VISUAL $TRUENAS_HOME/financeiro/ledger/otavio.ledger"
-alias notes="cd $TRUENAS_HOME/obsidian && $VISUAL"
-alias notebook="notes"
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
-# Git Aliases
-alias gaa="git add . --all"
-alias gc="git commit --message"
-alias gd="git diff"
-alias gp="git push"
-alias gs="git status"
-alias gu="git pull"
+# System tool defaults
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ls="ls --color=auto -hF"
+alias ll="ls -l"
+alias la="ls -la"
+alias l.="ls -d .*"
+
+# Alias one command to another
+alias vim="nvim"
+alias trash="gio trash" # Gnome built-in. Alternatives: trash-cli
+
+# Custom
+alias dotfiles="cd $DOTFILES && $VISUAL -c 'Explore'"
+alias ledger_file="$VISUAL + $TRUENAS_HOME/financeiro/ledger/otavio.ledger"
+alias notes="cd $TRUENAS_HOME/obsidian && $VISUAL -c 'Explore'"
+alias notebook="notes"

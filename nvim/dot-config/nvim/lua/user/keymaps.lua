@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 vim.keymap.set("n", "<leader>eo", vim.cmd.Explore, { desc = "Open netrw directory explorer" })
 vim.keymap.set("n", "<leader>ec", vim.cmd.Rexplore, { desc = "Close netrw directory explorer" })
@@ -39,19 +39,16 @@ vim.keymap.set({ "n", "v" }, "c", "\"_c", { desc = "Change to blackhole register
 vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "'CTRL + c' works as 'ESC'"})
 
 -- Diagnostics
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Go to next error" })
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Go to previous error" })
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<C-k>", ":cnext<CR>zz", { desc = "Go to next error" })
+vim.keymap.set("n", "<C-j>", ":cprev<CR>zz", { desc = "Go to previous error" })
+vim.keymap.set("n", "<leader>k", ":lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", ":lprev<CR>zz")
 
 -- Replace all occurrences of word under cursor
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
--- Make file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make file executable" })
-
 -- Reload configuration
-vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>", { desc = "(Re)source configuration" })
+vim.keymap.set("n", "<leader><leader>", ":source $XDG_CONFIG_HOME/nvim/init.lua<CR>", { desc = "(Re)source configuration" })
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {

@@ -18,7 +18,7 @@ sudo dnf install git stow
 git clone https://github.com/obsilva/dotfiles.git $HOME/.config
 ```
 
-2. Configure GNU Stow to also work from `$HOME`. Without this, you have to be inside the `dotfiles` directory or provide additional input parameters to Stow:
+2. Configure GNU Stow to also work from `$HOME`. Without this, you have to be inside the `dotfiles` directory or run Stow with additional input parameters:
 
 ```shell
 ln -s $HOME/.config/dotfiles/.stowrc $HOME

@@ -6,7 +6,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {
-			-- default style. Options: dark, darker, cool, deep, warm, warmer
+			-- style options: dark, darker, cool, deep, warm, warmer
 			style = "warmer",
 		},
 	},
@@ -23,7 +23,7 @@ return {
 		lazy = true,
 		--priority = 1000,
 		opts = {
-			-- default style. Options: night, storm, moon, day
+			-- style options: night, storm, moon, day
 			style = "night",
 		},
 	},
@@ -33,9 +33,9 @@ return {
 		lazy = true,
 		--priority = 1000,
 		opts = {
-			-- default style. Options: latte, frappe, macchiato, mocha
+			-- style options: latte, frappe, macchiato, mocha
 			flavour = "mocha",
-			-- automatically detect installed plugins and enable their integrations
+			-- automatically detect installed plugins and enable integration
 			auto_integrations = true,
 		},
 	},
@@ -64,7 +64,7 @@ return {
 		lazy = true,
 		--priority = 1000,
 		opts = {
-			-- default style. Options: classic, octagon, pro, machine, ristretto, spectrum
+			-- style options: classic, octagon, pro, machine, ristretto, spectrum
 			filter = "spectrum",
 		},
 	},

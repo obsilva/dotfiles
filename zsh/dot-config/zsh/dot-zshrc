@@ -9,6 +9,7 @@ setopt CDABLE_VARS          # Try to expand with '~' if neither a directory nor 
 
 setopt CORRECT              # Spelling correction
 setopt EXTENDED_GLOB        # Use extended globbing syntax
+setopt NUMERIC_GLOB_SORT    # Sort files numerically
 
 # History
 export HISTFILE="$ZDOTDIR/.zsh_history" # History filepath
@@ -26,9 +27,14 @@ setopt HIST_VERIFY          # Do not execute immediately upon history expansion
 
 # Keybinding: -e for emacs (default), -v for vi
 bindkey -e
+
 # C-u to kill backwards from the cursor position (readline-like).
 # Kill entire line by default
-bindkey \^U backward-kill-line
+bindkey '^u' backward-kill-line
+
+# C-v to open the current line in the editor
+autoload -U edit-command-line && zle -N edit-command-line
+bindkey '^v' edit-command-line
 
 # User aliases
 source $HOME/.aliases

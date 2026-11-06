@@ -7,14 +7,16 @@ alias .....="cd ../../../.."
 # System tool defaults
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
-alias ls="ls --color=auto -hF"
+alias ls="ls --color=auto -hvF"
 alias ll="ls -l"
 alias la="ls -la"
 alias l.="ls -d .*"
 
 # Alias one command to another
-alias vim="nvim"
+alias open="xdg-open"
 alias trash="gio trash" # Gnome built-in. Alternatives: trash-cli
+alias vim="nvim"
+alias neofetch="fastfetch"
 
 # Custom
 alias dotfiles="cd $DOTFILES && $VISUAL -c 'Explore'"

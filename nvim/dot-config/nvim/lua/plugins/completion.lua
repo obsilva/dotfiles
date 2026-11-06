@@ -28,6 +28,7 @@ return {
 			ghost_text = { enabled = true },
 			menu = { draw = { treesitter = { "lsp" } } },
 			documentation = { auto_show = true, auto_show_delay_ms = 200 },
+			trigger = { show_on_backspace_in_keyword = true, show_on_insert = true },
 		},
 
 		-- Experimental signature help support
